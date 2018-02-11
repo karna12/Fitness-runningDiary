@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>UltimateFitnessDiary</title>
+      
+        
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/style.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
+   
+        <script src="js/script.js"></script> 
+        
+        <script>
+        
+                $(function(){
+                    
+                    $('.date').each(function() {
+                        $(this).datepicker();
+                        
+                        
+                    });
+                });
+        
+        </script>
+        
+        
+    </head>
+
+                    <body>
+                 <!--Home page--->
+                    <div data-role="page" id="home">
+                        
+                        <Header data-role="header" data-theme="a">
+                            
+                            <h1>UltimateFitnessDiary </h1>
+                        </Header>
+                        
+                        <div data-role="navbar">
+                        
+                            <ul> 
+                                <li> <a href="#home" data-transition ="none" data-icon="home" >Home</a></li>
+                                  <li> <a href="#add" data-transition ="none" data-icon="plus" >Add Run</a></li>
+                                <li> <a href="#home" data-transition ="none" data-icon="navigation" >Track Run</a></li>
+                                 <li> <a href="#home" data-transition ="none" data-icon="cloud" >Weather</a></li>
+                                 <li> <a href="#home" data-transition ="none" data-icon="heart" >Workout</a></li>
+                                <li> <a href="#home" data-transition ="none" data-icon="comment" >Notes</a></li>
+                                <li> <a href="#home" data-transition ="none" data-icon="clock" >Timer</a></li>
+                                <li> <a href="#home" data-transition ="none" data-icon="user" >Profile</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div data-role="content">
+                        
+                        <h3> Your journey starts Now </h3>
+                        <p> With this app you can track running,jogging or walking miles.</p>
+                            
+                        <h3> Track your Training</h3>
+                            
+                        <ul id="Stats" data-role="listview" data-filter="true" data-filter-placeholder="Filter runs by date or distance" data-instset="true"></ul>
+                            
+                            <br>
+                            
+                            <button id="Clear" onclick="return Conform ('Are you sure?')" data-theme="a">Clear</button>
+                        
+                        </div>
+                
+                
+                    <footer data-role="footer" data-theme="a">
+                        
+                    <h4>UltimateFitnessDiary &copy; 2018</h4>
+                        
+                    </footer>
+                       </div>  
+                        
+                        
+                        
+                        
+                        <!--Add page--->
+                        
+                         <div data-role="page" id="add">
+                        
+                        <Header data-role="header" data-theme="a">
+                            
+                            <h1>UltimateFitnessDiary </h1>
+                        </Header>
+                        
+                        <div data-role="navbar">
+                        
+                            <ul> 
+                                <li> <a href="#home" data-transition ="none" data-icon="home" >Home</a></li>
+                                  <li> <a href="#add" data-transition ="none" data-icon="plus" >Add Run</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div data-role="content">
+                        <h3>Add Run</h3>
+                            <form id= "addForm">
+                            
+                            <label for="addMiles"> Enter Miles:</label>
+                            <input type="text" id="addMiles">
+                            
+                                <label for="addDate">Enter Date</label>
+                                <input type="text" data-role="date" class="date" id="addDate" data-inline="true">
+                                
+                                
+                                
+                                <button id="submitAdd" class="ui-btn ui-btn-b ui-corder-all">  Submit </button>                         
+                            </form>
+                        
+                        </div>
+                
+                
+                   
+
+                    <footer data-role="footer" data-theme="a">
+                        
+                    <h4>UltimateFitnessDiary &copy; 2018</h4>
+                        
+                    </footer>
+                       </div>  
+    
+
+                </body>
+</html>
